@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pitic Marketing | {% block title %}{% endblock %}</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+</head>
+<body>
+	<nav class="navbar navbar-top">
+		<div class="container d-flex justify-content-end p-0">
+			<span>
+				<a href="tel:+5216622006436"> <img src="{% static 'img/icons/ic-ph.png' %}" alt="phone" class="w-25">(662) 200 64 36</a>
+			</span>
+			<span>
+				<a href="mailto:admin@piticmkt.com"> <img src="{% static 'img/icons/ic-msg.png' %}" alt="email" class="w-25">admin@piticmkt.com </a>
+			</span>
+			<span>
+				<a href="https://www.facebook.com"> <img src="{% static 'img/icons/ic-fb.png' %}" alt="facebook" class="w-50"></a>
+			</span>
+			<span>
+				<a href="https://www.twitter.com"> <img src="{% static 'img/icons/ic-tw.png' %}" alt="twitter" class="w-50"></a>
+			</span>
+			<span>
+				<a href="https://www.instagram.com"> <img src="{% static 'img/icons/ic-ig.png' %}" alt="instagram" class="w-50"></a>
+			</span>
+			<span>
+				<a href="https://www.google.com"> <img src="{% static 'img/icons/ic-gp.png' %}" alt="google" class="w-50"></a>
+			</span>
+		</div>
+	</nav>
+	<nav class="navbar navbar-expand-lg navbar-down p-4 mb-4 justify-content-between">
+		<div class="container">
+			<div class="col-md-3 col-sm-4">
+				<a class="navbar-brand" href="#">
+					<img src="{% static 'img/logo_header.png' %}" class="d-inline-block align-top w-75" alt="">
+				</a>
+			</div>
+			<div class="col-md-9 col-sm-8 d-flex justify-content-end">
+				{% if user.is_authenticated %}
+				<h3>Hola {{user.username}}</h3>
+				<p class="p-2"><a href="{% url 'logout' %}"> Cerrar Sesión</a></p>
+				{% else %}
+				<form class="form-inline" method="get">
+					{% csrf_token %}
+					<div class="form-group mt-2">
+						<label class="sr-only" for="user">Nombre de Usuario</label>
+						<input id="user" class="form-control mr-sm-2" type="text" placeholder="Usuario" aria-label="Usuario">
+					</div>
+					<div class="form-group pw mt-2">
+						<label class="sr-only" for="contrasena">Contraseña</label>
+						<input id="contrasena" class="form-control mr-sm-2" type="password" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="pwHelp">
+						<span id="pwHelp" class="my-5">
+							<a href="www.facebook.com" class="text-muted" tabindex="-1">¿Olvidaste tu cuenta?</a>
+						</span>
+					</div>
+					
+					<button class="btn btn-login mt-sm-2" type="submit">Iniciar Sesión</button>
+				</form>
+				{% endif %}
+			</div>
+		</div>
+	</nav>
+
+	{% block content %}
+	{% endblock %}
+
+	<footer class="footer">
+      <div class="container d-flex justify-content-between">
+      	<div class="col p-3">
+        		<h5><strong>Todos los derechos reservados PITIC MARKETING</strong></h5>
+			</div>
+			<div class="col p-3 d-flex justify-content-end">
+				<span>
+					<a href="https://www.facebook.com"> <img src="{% static 'img/icons/ic-fb.png' %}" alt="facebook" ></a>
+				</span>
+				<span>
+					<a href="https://www.twitter.com"> <img src="{% static 'img/icons/ic-tw.png' %}" alt="twitter" ></a>
+				</span>
+				<span>
+					<a href="https://www.instagram.com"> <img src="{% static 'img/icons/ic-ig.png' %}" alt="instagram" ></a>
+				</span>
+				<span>
+					<a href="https://www.google.com"> <img src="{% static 'img/icons/ic-gp.png' %}" alt="google" ></a>
+				</span>
+			</div>
+      </div>
+    </footer>
+</body>
+</html>

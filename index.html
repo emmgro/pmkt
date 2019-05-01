@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pitic Marketing</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<nav class="navbar navbar-top">
+		<div class="container d-flex justify-content-end p-0">
+			<span>
+				<a href="tel:+5216622006436"> <img src="img/icons/ic-ph.png" alt="phone" class="w-25">(662) 200 64 36</a>
+			</span>
+			<span>
+				<a href="mailto:admin@piticmkt.com"> <img src="img/icons/ic-msg.png" alt="email" class="w-25">admin@piticmkt.com </a>
+			</span>
+			<span>
+				<a href="www.facebook.com"> <img src="img/icons/ic-fb.png" alt="social" class="w-50"></a>
+			</span>
+			<span>
+				<a href="www.twitter.com"> <img src="img/icons/ic-tw.png" alt="social" class="w-50"></a>
+			</span>
+			<span>
+				<a href="www.instagram.com"> <img src="img/icons/ic-ig.png" alt="social" class="w-50"></a>
+			</span>
+			<span>
+				<a href="www.google.com"> <img src="img/icons/ic-gp.png" alt="social" class="w-50"></a>
+			</span>
+		</div>
+	</nav>
+
+	<nav class="navbar navbar-expand-lg navbar-down p-4 mb-4 justify-content-between">
+		<div class="container">
+			<div class="col-md-3 col-sm-4">
+				<a class="navbar-brand" href="#">
+					<img src="img/logo_header.png" class="d-inline-block align-top w-75" alt="">
+				</a>
+			</div>
+			<div class="col-md-9 col-sm-8 d-flex justify-content-end">
+				<form class="form-inline">
+					<div class="form-group mt-2">
+						<label class="sr-only" for="user">Nombre de Usuario</label>
+						<input id="user" class="form-control mr-sm-2" type="text" placeholder="Usuario" aria-label="Usuario">
+					</div>
+					<div class="form-group pw mt-2">
+						<label class="sr-only" for="contrasena">Contraseña</label>
+						<input id="contrasena" class="form-control mr-sm-2" type="password" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="pwHelp">
+						<span id="pwHelp" class="my-5">
+							<a href="www.facebook.com" class="text-muted" tabindex="-1">¿Olvidaste tu cuenta?</a>
+						</span>
+					</div>
+					
+					<button class="btn btn-login mt-sm-2" type="submit">Iniciar Sesión</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<section class="header">
+		<div>
+			<div class="row no-gutters">
+				<div class="high col-12 col-sm-12 col-md-4 col-lg-6 p-0">
+					<!-- <img src="img/imagen1.png" class="img-fluid" alt=""> -->
+				</div>
+				<div class="hello col-12 col-sm-12 col-md-8 col-lg-6 p-5 align-self-center">
+					<h1 class="text-uppercase"><strong>¡Bienvenid@!</strong></h1>
+					<p class="lead">Crea una cuenta</p>
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label class="sr-only" for="inputname">Nombre</label>
+								<input type="text" class="form-control" id="inputname" placeholder="Nombre">
+							</div>
+							<div class="form-group col-md-6">
+								<label class="sr-only" for="inputlastname">Apellido</label>
+								<input type="text" class="form-control" id="inputlastname" placeholder="Apellido">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label class="sr-only" for="inputphone">Teléfono</label>
+								<input type="text" class="form-control" id="inputphone" placeholder="Teléfono">
+							</div>
+							<div class="form-group col-md-6">
+								<label class="sr-only" for="inputempresa">Empresa</label>
+								<input type="text" class="form-control" id="inputempresa" placeholder="Empresa">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label class="sr-only" for="inputemail">Correo Electrónico</label>
+								<input type="email" class="form-control" id="inputemail" placeholder="Correo Electrónico">
+							</div>
+
+							<div class="form-group col-md-6">
+								<label class="sr-only" for="inputpassword">Contraseña</label>
+								<input type="password" class="form-control" id="inputpassword" placeholder="Contraseña">
+							</div>
+						</div>
+						<div class="form-row">
+							<h3 class="" for="inputbirth">Fecha de nacimiento:</h3>
+						</div>
+						<div class="form-row">
+							<div class="form-group">
+
+								<select id="inputbirth" class="form-control form-control-sm">
+									<option selected>25</option>
+									<option>...</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<select id="inputbirth" class="form-control form-control-sm">
+									<option selected>Abr</option>
+									<option>...</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<select id="inputbirth" class="form-control form-control-sm">
+									<option selected>1992</option>
+									<option>...</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group col-6 p-0">
+							<div class="form-radio btn-group btn-group-toggle" data-toggle="buttons">
+								<label class="form-radio-label m-2 text-uppercase">
+									<input class="form-radio-input" type="radio"  name="options" id="mujer">
+									Mujer
+								</label>
+								<label class="form-radio-label m-2 text-uppercase">
+									<input class="form-radio-input" type="radio"  name="options" id="hombre">
+									Hombre
+								</label>
+							</div>
+							<p>Al hacer clic en "Registrate", aceptas nuestras <a href="#">Condiciones</a>, la <a href="#">Politica de datos</a> y la <a href="#">Politica de cookies</a>. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.</p>
+						</div>
+
+						<button type="submit" class="btn btn-reg btn-lg text-uppercase">Registrate</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="contact p-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-4">
+					<img src="img/logo_footer.png" class="w-75" alt="">
+				</div>
+				<div class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="col-sm-12 col-md-4 contact-icons">
+					<h2 class="text-uppercase">Contáctanos</h2>
+					<ul class="list-unstyled">
+						<li>
+							<a href="tel:+5216622006436"> <img src="img/icons/ic-ph.png" alt="phone">(662) 200 64 36</a>
+						</li>
+						<li>
+							<a href="mailto:admin@piticmkt.com"> <img src="img/icons/ic-msg.png" alt="email">admin@piticmkt.com </a>
+						</li>
+						<li>
+							<a href="www.maps.google.com"><p><img src="img/icons/ic-loc.png" alt="location">  Plaza Fátima.
+	Guadalupe Victoria #15
+	Local 25 Col. San Benito 
+	Hermosillo, Sonora.</p></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+      <div class="container d-flex justify-content-between">
+      	<div class="col p-3">
+        		<h5><strong>Todos los derechos reservados PITIC MARKETING</strong></h5>
+			</div>
+			<div class="col p-3 d-flex justify-content-end">
+				<span>
+					<a href="www.facebook.com"> <img src="img/icons/ic-fb.png" alt="social" ></a>
+				</span>
+				<span>
+					<a href="www.twitter.com"> <img src="img/icons/ic-tw.png" alt="social" ></a>
+				</span>
+				<span>
+					<a href="www.instagram.com"> <img src="img/icons/ic-ig.png" alt="social" ></a>
+				</span>
+				<span>
+					<a href="www.google.com"> <img src="img/icons/ic-gp.png" alt="social" ></a>
+				</span>
+			</div>
+      </div>
+    </footer>
+</body>
+</html>

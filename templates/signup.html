@@ -1,0 +1,76 @@
+{% block content %}
+	<form method="get" action="{% url 'signup' %}">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label class="sr-only" for="inputname">Nombre</label>
+				<input type="text" class="form-control" id="inputname" placeholder="Nombre">
+			</div>
+			<div class="form-group col-md-6">
+				<label class="sr-only" for="inputlastname">Apellido</label>
+				<input type="text" class="form-control" id="inputlastname" placeholder="Apellido">
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label class="sr-only" for="inputphone">Teléfono</label>
+				<input type="text" class="form-control" id="inputphone" placeholder="Teléfono">
+			</div>
+			<div class="form-group col-md-6">
+				<label class="sr-only" for="inputempresa">Empresa</label>
+				<input type="text" class="form-control" id="inputempresa" placeholder="Empresa">
+			</div>
+		</div>
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label class="sr-only" for="inputemail">Correo Electrónico</label>
+				<input type="email" class="form-control" id="inputemail" placeholder="Correo Electrónico">
+			</div>
+
+			<div class="form-group col-md-6">
+				<label class="sr-only" for="inputpassword">Contraseña</label>
+				<input type="password" class="form-control" id="inputpassword" placeholder="Contraseña">
+			</div>
+		</div>
+		<div class="form-row">
+			<h3 class="" for="inputbirth">Fecha de nacimiento:</h3>
+		</div>
+		<div class="form-row">
+			<div class="form-group">
+
+				<select id="inputbirthday" class="form-control form-control-sm">
+					<option selected>25</option>
+					<option>...</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select id="inputbirthmonth" class="form-control form-control-sm">
+					<option selected>Abr</option>
+					<option>...</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<select id="inputbirthyear" class="form-control form-control-sm">
+					<option selected>1992</option>
+					<option>...</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group col-6 p-0">
+			<div class="form-radio btn-group btn-group-toggle" data-toggle="buttons">
+				<label class="form-radio-label m-2 text-uppercase">
+					<input class="form-radio-input" type="radio"  name="options" id="mujer">
+					Mujer
+				</label>
+				<label class="form-radio-label m-2 text-uppercase">
+					<input class="form-radio-input" type="radio"  name="options" id="hombre">
+					Hombre
+				</label>
+			</div>
+			<p>Al hacer clic en "Registrate", aceptas nuestras <a href="#">Condiciones</a>, la <a href="#">Politica de datos</a> y la <a href="#">Politica de cookies</a>. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras.</p>
+		</div>
+
+		<button type="submit" class="btn btn-reg btn-lg text-uppercase">Registrate</button>
+	</form>
+{% endblock %}
